@@ -1,0 +1,38 @@
+{
+  "case_id": "example-optimize-not-official",
+  "example_only": true,
+  "objective": {
+    "metric": "yield",
+    "direction": "max"
+  },
+  "budget": {
+    "max_runs": 3,
+    "hours_per_run": 1,
+    "machine_hour_cost": 2,
+    "consumable_cost": 1
+  },
+  "parameters": [
+    {
+      "name": "temperature",
+      "unit": "C",
+      "min": 20,
+      "max": 80,
+      "step": 20,
+      "limits": [
+        {
+          "source": "safety",
+          "max": 60,
+          "unit": "C"
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "parameters": {
+        "temperature": 40
+      },
+      "response": 0.2
+    }
+  ]
+}

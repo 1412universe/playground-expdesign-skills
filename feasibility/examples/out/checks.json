@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "detail": [],
+      "name": "no_silent_pass",
+      "ok": true
+    },
+    {
+      "detail": [],
+      "name": "categories_present",
+      "ok": true
+    },
+    {
+      "detail": [
+        "feasible"
+      ],
+      "name": "verdicts_closed",
+      "ok": true
+    }
+  ]
+}

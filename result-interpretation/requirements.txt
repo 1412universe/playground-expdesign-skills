@@ -1,0 +1,2 @@
+stdlib
+# optional, used when present: pymupdf, pdfminer.six, scipy

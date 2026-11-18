@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "detail": [],
+      "name": "no_silent_pass",
+      "ok": true
+    },
+    {
+      "detail": [],
+      "name": "categories_present",
+      "ok": true
+    },
+    {
+      "detail": [
+        "feasible",
+        "feasible"
+      ],
+      "name": "verdicts_closed",
+      "ok": true
+    },
+    {
+      "detail": "one",
+      "name": "winner_is_feasible",
+      "ok": true
+    },
+    {
+      "detail": [
+        "two"
+      ],
+      "name": "rejection_has_numbers_or_verdict",
+      "ok": true
+    }
+  ]
+}

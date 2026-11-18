@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "方案没写的设备、参数、伦理和样本量记为缺口，不记为已满足。",
+      "evidence": "case.json:plans",
+      "id": "c-silence"
+    }
+  ]
+}

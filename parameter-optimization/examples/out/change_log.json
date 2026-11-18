@@ -1,0 +1,14 @@
+{
+  "change_log": [
+    {
+      "decision": "当前可执行建议取可行域内响应最好的已观测点，不外推到域外。",
+      "evidence": "case.json:history[0]",
+      "id": "c-best-observed"
+    },
+    {
+      "decision": "没有实测响应时不填写预测值。",
+      "evidence": "case.json:history",
+      "id": "c-no-invented-response"
+    }
+  ]
+}

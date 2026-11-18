@@ -1,0 +1,508 @@
+{
+  "case_id": "example-compare-not-official",
+  "change_log": [
+    {
+      "decision": "方案没写的设备、参数、伦理和样本量记为缺口，不记为已满足。",
+      "evidence": "case.json:plans",
+      "id": "c-silence"
+    },
+    {
+      "decision": "只在“可行且成本每一项都有数字”的方案之间按成本升序选择；缺成本不按 0 比较。",
+      "evidence": "comparison_table",
+      "id": "c-rank-rule"
+    }
+  ],
+  "checks": [
+    {
+      "detail": [],
+      "name": "no_silent_pass",
+      "ok": true
+    },
+    {
+      "detail": [],
+      "name": "categories_present",
+      "ok": true
+    },
+    {
+      "detail": [
+        "feasible",
+        "feasible"
+      ],
+      "name": "verdicts_closed",
+      "ok": true
+    },
+    {
+      "detail": "one",
+      "name": "winner_is_feasible",
+      "ok": true
+    },
+    {
+      "detail": [
+        "two"
+      ],
+      "name": "rejection_has_numbers_or_verdict",
+      "ok": true
+    }
+  ],
+  "confirmations": [],
+  "evidence_and_risks": {
+    "rejections": [
+      {
+        "evidence": [
+          "cost two=10.0",
+          "cost one=6.0"
+        ],
+        "plan_id": "two",
+        "reason": "成本 10.0 高于所选 6.0。"
+      }
+    ],
+    "reviews": [
+      {
+        "conditions": [],
+        "hard_fails": [],
+        "items": [
+          {
+            "category": "hypothesis_variables",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].hypothesis",
+                "quote": "示意方案一"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "假设和变量都有原文。",
+            "status": "pass"
+          },
+          {
+            "category": "controls",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].controls",
+                "quote": "{'name': 'blank', 'blocks': '本底'}"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "对照写明了它要排除什么，或给出了可核对的对照说明。",
+            "status": "pass"
+          },
+          {
+            "category": "equipment_materials",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.equipment",
+                "quote": "demo-oven status=on_hand"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "点名的设备都在清单中且状态为已具备。",
+            "status": "pass"
+          },
+          {
+            "category": "materials",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.materials",
+                "quote": "demo-reagent on_hand=5.0 need=1.0 status=on_hand lead=None"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "点名材料的库存覆盖方案用量。",
+            "status": "pass"
+          },
+          {
+            "category": "time_cost",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].steps",
+                "quote": "occupied_hours = 1.0 = 1.0"
+              }
+            ],
+            "hard": false,
+            "numbers": {
+              "occupied_hours": 1,
+              "occupied_hours_formula": "occupied_hours = 1.0 = 1.0",
+              "occupied_hours_terms": [
+                {
+                  "hours": 1,
+                  "step": "s1"
+                }
+              ],
+              "person_hours": null,
+              "wait_days": null,
+              "wait_days_formula": null
+            },
+            "statement": "工时只加了写明小时数的步骤。 occupied_hours = 1.0 = 1.0。",
+            "status": "pass"
+          },
+          {
+            "category": "parameter_range",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].parameters",
+                "quote": "temperature=40.0 range 20.0..80.0 via demo-oven"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "写出的参数值都落在已关联的量程内。",
+            "status": "pass"
+          },
+          {
+            "category": "risk_exception",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].risks",
+                "quote": "{'trigger': '故障', 'mitigation': '停止'}"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "至少一条风险同时写了触发条件和处置。",
+            "status": "pass"
+          },
+          {
+            "category": "ethics_safety",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0]",
+                "quote": "ethics keywords absent"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "方案原文没有人体、动物、危险试剂或个人数据的触发词。审批状态：not_required。",
+            "status": "not_indicated"
+          },
+          {
+            "category": "samples",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.samples",
+                "quote": "n_available=3.0"
+              }
+            ],
+            "hard": false,
+            "numbers": {
+              "n_available": 3,
+              "n_required": 1
+            },
+            "statement": "可用样本 3.0 覆盖需求 1.0。",
+            "status": "pass"
+          }
+        ],
+        "plan_id": "one",
+        "time": {
+          "occupied_hours": 1,
+          "occupied_hours_formula": "occupied_hours = 1.0 = 1.0",
+          "occupied_hours_terms": [
+            {
+              "hours": 1,
+              "step": "s1"
+            }
+          ],
+          "person_hours": null,
+          "wait_days": null,
+          "wait_days_formula": null
+        },
+        "uncertainties": [],
+        "verdict": "feasible",
+        "version": null
+      },
+      {
+        "conditions": [],
+        "hard_fails": [],
+        "items": [
+          {
+            "category": "hypothesis_variables",
+            "evidence": [
+              {
+                "locator": "case.json:plans[1].hypothesis",
+                "quote": "示意方案二"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "假设和变量都有原文。",
+            "status": "pass"
+          },
+          {
+            "category": "controls",
+            "evidence": [
+              {
+                "locator": "case.json:plans[1].controls",
+                "quote": "{'name': 'blank', 'blocks': '本底'}"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "对照写明了它要排除什么，或给出了可核对的对照说明。",
+            "status": "pass"
+          },
+          {
+            "category": "equipment_materials",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.equipment",
+                "quote": "demo-oven status=on_hand"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "点名的设备都在清单中且状态为已具备。",
+            "status": "pass"
+          },
+          {
+            "category": "materials",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.materials",
+                "quote": "demo-reagent on_hand=5.0 need=1.0 status=on_hand lead=None"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "点名材料的库存覆盖方案用量。",
+            "status": "pass"
+          },
+          {
+            "category": "time_cost",
+            "evidence": [
+              {
+                "locator": "case.json:plans[1].steps",
+                "quote": "occupied_hours = 1.0 = 1.0"
+              }
+            ],
+            "hard": false,
+            "numbers": {
+              "occupied_hours": 1,
+              "occupied_hours_formula": "occupied_hours = 1.0 = 1.0",
+              "occupied_hours_terms": [
+                {
+                  "hours": 1,
+                  "step": "s1"
+                }
+              ],
+              "person_hours": null,
+              "wait_days": null,
+              "wait_days_formula": null
+            },
+            "statement": "工时只加了写明小时数的步骤。 occupied_hours = 1.0 = 1.0。",
+            "status": "pass"
+          },
+          {
+            "category": "parameter_range",
+            "evidence": [
+              {
+                "locator": "case.json:plans[1].parameters",
+                "quote": "temperature=40.0 range 20.0..80.0 via demo-oven"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "写出的参数值都落在已关联的量程内。",
+            "status": "pass"
+          },
+          {
+            "category": "risk_exception",
+            "evidence": [
+              {
+                "locator": "case.json:plans[1].risks",
+                "quote": "{'trigger': '故障', 'mitigation': '停止'}"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "至少一条风险同时写了触发条件和处置。",
+            "status": "pass"
+          },
+          {
+            "category": "ethics_safety",
+            "evidence": [
+              {
+                "locator": "case.json:plans[1]",
+                "quote": "ethics keywords absent"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "方案原文没有人体、动物、危险试剂或个人数据的触发词。审批状态：not_required。",
+            "status": "not_indicated"
+          },
+          {
+            "category": "samples",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.samples",
+                "quote": "n_available=3.0"
+              }
+            ],
+            "hard": false,
+            "numbers": {
+              "n_available": 3,
+              "n_required": 1
+            },
+            "statement": "可用样本 3.0 覆盖需求 1.0。",
+            "status": "pass"
+          }
+        ],
+        "plan_id": "two",
+        "time": {
+          "occupied_hours": 1,
+          "occupied_hours_formula": "occupied_hours = 1.0 = 1.0",
+          "occupied_hours_terms": [
+            {
+              "hours": 1,
+              "step": "s1"
+            }
+          ],
+          "person_hours": null,
+          "wait_days": null,
+          "wait_days_formula": null
+        },
+        "uncertainties": [],
+        "verdict": "feasible",
+        "version": null
+      }
+    ],
+    "selection_reason": "在可行且成本完整的方案中，one 的成本 6.0 最低。",
+    "table_evidence": [
+      {
+        "locator": "comparison:one",
+        "quote": "verdict=feasible cost=6.0"
+      },
+      {
+        "locator": "comparison:two",
+        "quote": "verdict=feasible cost=10.0"
+      }
+    ]
+  },
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "experiment_plan": {
+    "chosen_plan_id": "one",
+    "comparison_table": [
+      {
+        "conditions": [],
+        "cost": 6,
+        "cost_complete": true,
+        "cost_missing": [],
+        "cost_terms": [
+          {
+            "name": "machine",
+            "value": 5
+          },
+          {
+            "name": "material",
+            "value": 1
+          }
+        ],
+        "evidence_n": 1,
+        "hard_fails": [],
+        "occupied_hours": 1,
+        "plan_id": "one",
+        "risk_gaps": 0,
+        "verdict": "feasible",
+        "wait_days": null
+      },
+      {
+        "conditions": [],
+        "cost": 10,
+        "cost_complete": true,
+        "cost_missing": [],
+        "cost_terms": [
+          {
+            "name": "machine",
+            "value": 9
+          },
+          {
+            "name": "material",
+            "value": 1
+          }
+        ],
+        "evidence_n": 1,
+        "hard_fails": [],
+        "occupied_hours": 1,
+        "plan_id": "two",
+        "risk_gaps": 0,
+        "verdict": "feasible",
+        "wait_days": null
+      }
+    ],
+    "conditions_before_execution": [],
+    "controls": [
+      {
+        "blocks": "本底",
+        "name": "blank"
+      }
+    ],
+    "hypothesis": "示意方案一",
+    "note": "字段均来自被点名的方案版本；没有写的步骤不会在这里补上。",
+    "parameters": [
+      {
+        "name": "temperature",
+        "unit": "C",
+        "value": 40
+      }
+    ],
+    "readout": null,
+    "resources": [
+      "demo-oven"
+    ],
+    "reviewed_plan_id": "one",
+    "selection_reason": "在可行且成本完整的方案中，one 的成本 6.0 最低。",
+    "sensitive_to_tied_cost": false,
+    "steps": [
+      {
+        "hours": 1,
+        "id": "s1"
+      }
+    ],
+    "time": {
+      "occupied_hours": 1,
+      "occupied_hours_formula": "occupied_hours = 1.0 = 1.0",
+      "occupied_hours_terms": [
+        {
+          "hours": 1,
+          "step": "s1"
+        }
+      ],
+      "person_hours": null,
+      "wait_days": null,
+      "wait_days_formula": null
+    },
+    "variables": [
+      {
+        "name": "temperature",
+        "unit": "C"
+      }
+    ],
+    "verdict": "feasible"
+  },
+  "mode": "compare",
+  "output_contract_echo": null,
+  "runtime_seconds": 0.006276,
+  "sources": [
+    {
+      "bytes": 2409,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "a7069edf016f616d7c7cb0e93cde3e19d599a76fea4605d304f87e64c294bcf9",
+      "truncated": false
+    },
+    {
+      "bytes": 70,
+      "error": null,
+      "path": "task.md",
+      "reader": "text",
+      "sha256": "456cd18c5423b012854b2feb6bfc32def71474e39787b1db3ed3249c789afe13",
+      "truncated": false
+    }
+  ],
+  "status": "success",
+  "summary": "在可行且成本完整的方案中，one 的成本 6.0 最低。 one=feasible two=feasible",
+  "uncertainties": []
+}

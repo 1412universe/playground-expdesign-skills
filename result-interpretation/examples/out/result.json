@@ -1,0 +1,248 @@
+{
+  "case_id": "example-interpret-not-official",
+  "change_log": [
+    {
+      "decision": "没有在表里共变的因子时，不补充化学或生物机理。",
+      "evidence": "measurements.csv",
+      "id": "c-no-mechanism"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 6,
+      "name": "anomaly_rows_exist",
+      "ok": true
+    },
+    {
+      "detail": 1,
+      "name": "cause_has_exclusion",
+      "ok": true
+    },
+    {
+      "detail": "slope = Σ((x-mean_x)*(y-mean_y)) / Σ((x-mean_x)^2)",
+      "name": "slope_recomputed_from_rows",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "blocking": false,
+      "item": "时间与批次",
+      "why": "二者在这张表里没有交叉，不能单独解释斜率。"
+    }
+  ],
+  "evidence_and_risks": {
+    "anomalies": [
+      {
+        "batch": "B",
+        "channel": null,
+        "deviation": 6.95,
+        "median": 1.05,
+        "row": 5,
+        "rule": "abs(y-median) > 3*1.4826*MAD",
+        "x": 4,
+        "y": 8
+      },
+      {
+        "batch": "B",
+        "channel": null,
+        "deviation": 7.15,
+        "median": 1.05,
+        "row": 6,
+        "rule": "abs(y-median) > 3*1.4826*MAD",
+        "x": 5,
+        "y": 8.2
+      }
+    ],
+    "causes": [
+      {
+        "claim": "association",
+        "exclusion_levels": [
+          "A"
+        ],
+        "factor": "batch",
+        "level": "B",
+        "mechanism": null,
+        "statement": "batch=B 覆盖了异常行，A 没有异常行。这只说明共变，不是机理。",
+        "support_rows": [
+          5,
+          6
+        ]
+      }
+    ],
+    "non_claims": [
+      "不从读数本身推断未出现在列名中的反应机理。"
+    ],
+    "risks": [
+      {
+        "action": "原因栏只保留与分组共变的因子，并写明排除组。",
+        "consequence": "批次或通道差异会被误当成反应机理",
+        "trigger": "把相关写成机理"
+      }
+    ],
+    "series": [
+      {
+        "aliased_with": "batch",
+        "anomalies": [
+          {
+            "batch": "B",
+            "channel": null,
+            "deviation": 6.95,
+            "median": 1.05,
+            "row": 5,
+            "rule": "abs(y-median) > 3*1.4826*MAD",
+            "x": 4,
+            "y": 8
+          },
+          {
+            "batch": "B",
+            "channel": null,
+            "deviation": 7.15,
+            "median": 1.05,
+            "row": 6,
+            "rule": "abs(y-median) > 3*1.4826*MAD",
+            "x": 5,
+            "y": 8.2
+          }
+        ],
+        "anomalies_called": true,
+        "anomaly_withheld": false,
+        "causes": [
+          {
+            "claim": "association",
+            "exclusion_levels": [
+              "A"
+            ],
+            "factor": "batch",
+            "level": "B",
+            "mechanism": null,
+            "statement": "batch=B 覆盖了异常行，A 没有异常行。这只说明共变，不是机理。",
+            "support_rows": [
+              5,
+              6
+            ]
+          }
+        ],
+        "cutoff": {
+          "limit": 0.44478,
+          "median": 1.05,
+          "rule": "mad",
+          "sigma": 0.14826
+        },
+        "group_means": [
+          {
+            "level": "A",
+            "mean": 1,
+            "n": 4
+          },
+          {
+            "level": "B",
+            "mean": 8.1,
+            "n": 2
+          }
+        ],
+        "n": 6,
+        "non_claims": [
+          "不从读数本身推断未出现在列名中的反应机理。"
+        ],
+        "path": "measurements.csv",
+        "trend": {
+          "formula": "slope = Σ((x-mean_x)*(y-mean_y)) / Σ((x-mean_x)^2)",
+          "intercept": -0.6904761905,
+          "mean_x": 2.5,
+          "mean_y": 3.3666666667,
+          "n": 6,
+          "slope": 1.6228571429
+        },
+        "uncertainties": [
+          {
+            "detail": "批次的 time_h 区间没有重叠，合并斜率与批次差异混在一起。",
+            "id": "u-alias",
+            "topic": "alias"
+          }
+        ],
+        "x_name": "time_h",
+        "y_name": "signal"
+      }
+    ]
+  },
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "experiment_plan": {
+    "conditions_before_execution": [
+      "批次的 time_h 区间没有重叠，合并斜率与批次差异混在一起。"
+    ],
+    "controls": [
+      {
+        "name": "A",
+        "role": "exclusion group"
+      }
+    ],
+    "hypothesis": "读数相对 time_h 的变化可以用表内斜率描述，不外推机理。",
+    "parameters": [],
+    "readout": "signal",
+    "resources": [
+      {
+        "rows": 6,
+        "table": "measurements.csv"
+      }
+    ],
+    "steps": [
+      {
+        "action": "回算异常行",
+        "detail": "按 measurements.csv 的列 signal 重算中位数和阈值，核对行 5, 6。"
+      },
+      {
+        "action": "分开因子",
+        "detail": "用与排除组相同的 time_h 取值重复 batch=B，避免和批次绑在一起。"
+      }
+    ],
+    "variables": [
+      {
+        "name": "signal",
+        "role": "dependent"
+      },
+      {
+        "name": "time_h",
+        "role": "independent"
+      }
+    ]
+  },
+  "mode": "interpret",
+  "output_contract_echo": null,
+  "runtime_seconds": 0.006753,
+  "sources": [
+    {
+      "bytes": 74,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "b4d39997336915c8a5cc2599be3cbaa14f8e12974056da748b23975f516b5e9d",
+      "truncated": false
+    },
+    {
+      "bytes": 64,
+      "error": null,
+      "path": "measurements.csv",
+      "reader": "csv",
+      "sha256": "eb7608e627d01ed8892b8df806d0f6426776d4f475189e47fca9d5b9b8734eb1",
+      "truncated": false
+    },
+    {
+      "bytes": 76,
+      "error": null,
+      "path": "task.md",
+      "reader": "text",
+      "sha256": "f74bae9c43c97308bd1a01a584c77ae440de0a7ca18b9f7a1caea194090ff614",
+      "truncated": false
+    }
+  ],
+  "status": "success",
+  "summary": "表 measurements.csv 的 signal 对 time_h，n=6，斜率=1.6228571428571426。该斜率与 batch 混杂。异常行：5,6。共变因子：batch=B 覆盖了异常行，A 没有异常行。这只说明共变，不是机理。",
+  "uncertainties": [
+    {
+      "detail": "批次的 time_h 区间没有重叠，合并斜率与批次差异混在一起。",
+      "id": "u-alias",
+      "topic": "alias"
+    }
+  ]
+}

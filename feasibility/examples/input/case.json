@@ -1,0 +1,80 @@
+{
+  "case_id": "example-feasibility-not-official",
+  "example_only": true,
+  "plans": [
+    {
+      "id": "demo",
+      "hypothesis": "示意：产率随温度升高，仅用于演示接口。",
+      "variables": [
+        {
+          "name": "temperature",
+          "unit": "C"
+        }
+      ],
+      "controls": [
+        {
+          "name": "blank",
+          "blocks": "试剂本底"
+        }
+      ],
+      "equipment": [
+        "demo-oven"
+      ],
+      "materials": [
+        {
+          "name": "demo-reagent",
+          "qty": 1,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "hours": 1
+        }
+      ],
+      "parameters": [
+        {
+          "name": "temperature",
+          "value": 50,
+          "unit": "C"
+        }
+      ],
+      "risks": [
+        {
+          "trigger": "示意故障",
+          "mitigation": "停止"
+        }
+      ],
+      "samples": {
+        "n_required": 2
+      }
+    }
+  ],
+  "contracts": {
+    "equipment": [
+      {
+        "name": "demo-oven",
+        "status": "on_hand",
+        "measures": "temperature",
+        "min": 20,
+        "max": 80,
+        "unit": "C",
+        "booking_days": 1
+      }
+    ],
+    "materials": [
+      {
+        "name": "demo-reagent",
+        "qty_on_hand": 5,
+        "status": "on_hand"
+      }
+    ],
+    "samples": {
+      "n_available": 4
+    },
+    "ethics": {
+      "approval_status": "not_required"
+    }
+  }
+}

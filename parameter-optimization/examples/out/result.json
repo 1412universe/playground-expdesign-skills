@@ -1,0 +1,189 @@
+{
+  "case_id": "example-optimize-not-official",
+  "change_log": [
+    {
+      "decision": "当前可执行建议取可行域内响应最好的已观测点，不外推到域外。",
+      "evidence": "case.json:history[0]",
+      "id": "c-best-observed"
+    },
+    {
+      "decision": "没有实测响应时不填写预测值。",
+      "evidence": "case.json:history",
+      "id": "c-no-invented-response"
+    }
+  ],
+  "checks": [
+    {
+      "detail": "grid membership",
+      "name": "recommendations_inside_domain",
+      "ok": true
+    },
+    {
+      "detail": "points",
+      "name": "no_response_invented",
+      "ok": true
+    },
+    {
+      "detail": [],
+      "name": "conflicts_block_recommendation",
+      "ok": true
+    }
+  ],
+  "confirmations": [],
+  "evidence_and_risks": {
+    "history_path": "case.json:history",
+    "objective": {
+      "direction": "max",
+      "metric": "yield"
+    },
+    "parameter_path": "case.json:parameters",
+    "rejected_history": [],
+    "risks": []
+  },
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "experiment_plan": {
+    "conditions_before_execution": [],
+    "controls": [],
+    "cost": {
+      "formula": "per_run = 1.0 * 2.0 + 1.0 = 3.0",
+      "history_cost": 3,
+      "history_runs": 1,
+      "per_run": 3,
+      "proposed_cost": 6,
+      "proposed_runs": 2,
+      "status": "computed"
+    },
+    "hypothesis": {
+      "direction": "max",
+      "metric": "yield"
+    },
+    "next_runs": [
+      {
+        "parameters": {
+          "temperature": 20
+        },
+        "response": null,
+        "unit": "C",
+        "why": "可行域网格上尚未跑过、离当前最好观测最近的点"
+      },
+      {
+        "parameters": {
+          "temperature": 60
+        },
+        "response": null,
+        "unit": "C",
+        "why": "可行域网格上尚未跑过、离当前最好观测最近的点"
+      }
+    ],
+    "parameters": [
+      {
+        "bounds": [
+          {
+            "max": 80,
+            "min": 20,
+            "source": "stated",
+            "unit": "C"
+          },
+          {
+            "locator": null,
+            "max": 60,
+            "min": null,
+            "source": "safety",
+            "unit": "C"
+          }
+        ],
+        "conflict": false,
+        "evidence": [
+          {
+            "locator": "case.json:parameters[0]",
+            "quote": "temperature ∈ [20.0, 60.0] C"
+          }
+        ],
+        "finite": true,
+        "grid": [
+          20,
+          40,
+          60
+        ],
+        "max": 60,
+        "min": 20,
+        "name": "temperature",
+        "statement": "temperature ∈ [20.0, 60.0] C",
+        "step": 20,
+        "uncertainties": [],
+        "unit": "C"
+      }
+    ],
+    "readout": {
+      "direction": "max",
+      "metric": "yield"
+    },
+    "recommended_observed": [
+      {
+        "feasible": true,
+        "in_domain": true,
+        "index": 0,
+        "locator": "case.json:history[0]",
+        "observed": {
+          "temperature": 40
+        },
+        "parameters": {
+          "temperature": 40
+        },
+        "reasons": [],
+        "response": 0.2
+      }
+    ],
+    "resources": [],
+    "search": "grid_constrained_best_observed",
+    "steps": [
+      {
+        "parameters": {
+          "temperature": 20
+        },
+        "response": null,
+        "unit": "C",
+        "why": "可行域网格上尚未跑过、离当前最好观测最近的点"
+      },
+      {
+        "parameters": {
+          "temperature": 60
+        },
+        "response": null,
+        "unit": "C",
+        "why": "可行域网格上尚未跑过、离当前最好观测最近的点"
+      }
+    ],
+    "variables": [
+      {
+        "name": "temperature",
+        "role": "independent",
+        "unit": "C"
+      }
+    ]
+  },
+  "mode": "optimize",
+  "output_contract_echo": null,
+  "runtime_seconds": 0.005683,
+  "sources": [
+    {
+      "bytes": 621,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "e6ad430442522dc5231fc60b3742832101a0ed30829a28c551d94a272a4d0420",
+      "truncated": false
+    },
+    {
+      "bytes": 67,
+      "error": null,
+      "path": "task.md",
+      "reader": "text",
+      "sha256": "cf92dc55efe8d87eff9085a33fa8f1b84af0882a6268767e24e8b64119b260f9",
+      "truncated": false
+    }
+  ],
+  "status": "success",
+  "summary": "temperature ∈ [20.0, 60.0] C域内已观测最好点是 {'temperature': 40.0}，响应 0.2（方向 max）。下一步策略 grid_constrained_best_observed，追加 2 个点。这些点没有预测响应。",
+  "uncertainties": []
+}

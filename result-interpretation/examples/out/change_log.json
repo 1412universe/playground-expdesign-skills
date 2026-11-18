@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "没有在表里共变的因子时，不补充化学或生物机理。",
+      "evidence": "measurements.csv",
+      "id": "c-no-mechanism"
+    }
+  ]
+}

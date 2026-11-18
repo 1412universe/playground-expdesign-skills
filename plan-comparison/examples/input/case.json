@@ -1,0 +1,139 @@
+{
+  "case_id": "example-compare-not-official",
+  "example_only": true,
+  "plans": [
+    {
+      "id": "one",
+      "hypothesis": "示意方案一",
+      "variables": [
+        {
+          "name": "temperature",
+          "unit": "C"
+        }
+      ],
+      "controls": [
+        {
+          "name": "blank",
+          "blocks": "本底"
+        }
+      ],
+      "equipment": [
+        "demo-oven"
+      ],
+      "materials": [
+        {
+          "name": "demo-reagent",
+          "qty": 1
+        }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "hours": 1
+        }
+      ],
+      "parameters": [
+        {
+          "name": "temperature",
+          "value": 40,
+          "unit": "C"
+        }
+      ],
+      "risks": [
+        {
+          "trigger": "故障",
+          "mitigation": "停止"
+        }
+      ],
+      "samples": {
+        "n_required": 1
+      },
+      "cost": {
+        "machine": 5,
+        "material": 1
+      },
+      "evidence": [
+        "示意手册"
+      ]
+    },
+    {
+      "id": "two",
+      "hypothesis": "示意方案二",
+      "variables": [
+        {
+          "name": "temperature",
+          "unit": "C"
+        }
+      ],
+      "controls": [
+        {
+          "name": "blank",
+          "blocks": "本底"
+        }
+      ],
+      "equipment": [
+        "demo-oven"
+      ],
+      "materials": [
+        {
+          "name": "demo-reagent",
+          "qty": 1
+        }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "hours": 1
+        }
+      ],
+      "parameters": [
+        {
+          "name": "temperature",
+          "value": 40,
+          "unit": "C"
+        }
+      ],
+      "risks": [
+        {
+          "trigger": "故障",
+          "mitigation": "停止"
+        }
+      ],
+      "samples": {
+        "n_required": 1
+      },
+      "cost": {
+        "machine": 9,
+        "material": 1
+      },
+      "evidence": [
+        "示意手册"
+      ]
+    }
+  ],
+  "contracts": {
+    "equipment": [
+      {
+        "name": "demo-oven",
+        "status": "on_hand",
+        "measures": "temperature",
+        "min": 20,
+        "max": 80,
+        "unit": "C"
+      }
+    ],
+    "materials": [
+      {
+        "name": "demo-reagent",
+        "qty_on_hand": 5,
+        "status": "on_hand"
+      }
+    ],
+    "samples": {
+      "n_available": 3
+    },
+    "ethics": {
+      "approval_status": "not_required"
+    }
+  }
+}

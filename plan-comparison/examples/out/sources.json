@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "bytes": 2409,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "a7069edf016f616d7c7cb0e93cde3e19d599a76fea4605d304f87e64c294bcf9",
+      "truncated": false
+    },
+    {
+      "bytes": 70,
+      "error": null,
+      "path": "task.md",
+      "reader": "text",
+      "sha256": "456cd18c5423b012854b2feb6bfc32def71474e39787b1db3ed3249c789afe13",
+      "truncated": false
+    }
+  ]
+}

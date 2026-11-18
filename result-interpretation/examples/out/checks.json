@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "detail": 6,
+      "name": "anomaly_rows_exist",
+      "ok": true
+    },
+    {
+      "detail": 1,
+      "name": "cause_has_exclusion",
+      "ok": true
+    },
+    {
+      "detail": "slope = Σ((x-mean_x)*(y-mean_y)) / Σ((x-mean_x)^2)",
+      "name": "slope_recomputed_from_rows",
+      "ok": true
+    }
+  ]
+}

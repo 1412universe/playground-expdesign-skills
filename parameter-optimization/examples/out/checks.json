@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "detail": "grid membership",
+      "name": "recommendations_inside_domain",
+      "ok": true
+    },
+    {
+      "detail": "points",
+      "name": "no_response_invented",
+      "ok": true
+    },
+    {
+      "detail": [],
+      "name": "conflicts_block_recommendation",
+      "ok": true
+    }
+  ]
+}

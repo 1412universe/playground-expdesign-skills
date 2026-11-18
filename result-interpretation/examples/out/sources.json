@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "bytes": 74,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "b4d39997336915c8a5cc2599be3cbaa14f8e12974056da748b23975f516b5e9d",
+      "truncated": false
+    },
+    {
+      "bytes": 64,
+      "error": null,
+      "path": "measurements.csv",
+      "reader": "csv",
+      "sha256": "eb7608e627d01ed8892b8df806d0f6426776d4f475189e47fca9d5b9b8734eb1",
+      "truncated": false
+    },
+    {
+      "bytes": 76,
+      "error": null,
+      "path": "task.md",
+      "reader": "text",
+      "sha256": "f74bae9c43c97308bd1a01a584c77ae440de0a7ca18b9f7a1caea194090ff614",
+      "truncated": false
+    }
+  ]
+}

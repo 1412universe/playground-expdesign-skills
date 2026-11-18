@@ -1,0 +1,266 @@
+{
+  "case_id": "example-feasibility-not-official",
+  "change_log": [
+    {
+      "decision": "方案没写的设备、参数、伦理和样本量记为缺口，不记为已满足。",
+      "evidence": "case.json:plans",
+      "id": "c-silence"
+    }
+  ],
+  "checks": [
+    {
+      "detail": [],
+      "name": "no_silent_pass",
+      "ok": true
+    },
+    {
+      "detail": [],
+      "name": "categories_present",
+      "ok": true
+    },
+    {
+      "detail": [
+        "feasible"
+      ],
+      "name": "verdicts_closed",
+      "ok": true
+    }
+  ],
+  "confirmations": [],
+  "evidence_and_risks": {
+    "contract_path": "case.json:contracts",
+    "plan_path": "case.json:plans",
+    "reviews": [
+      {
+        "conditions": [],
+        "hard_fails": [],
+        "items": [
+          {
+            "category": "hypothesis_variables",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].hypothesis",
+                "quote": "示意：产率随温度升高，仅用于演示接口。"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "假设和变量都有原文。",
+            "status": "pass"
+          },
+          {
+            "category": "controls",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].controls",
+                "quote": "{'name': 'blank', 'blocks': '试剂本底'}"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "对照写明了它要排除什么，或给出了可核对的对照说明。",
+            "status": "pass"
+          },
+          {
+            "category": "equipment_materials",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.equipment",
+                "quote": "demo-oven status=on_hand"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "点名的设备都在清单中且状态为已具备。",
+            "status": "pass"
+          },
+          {
+            "category": "materials",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.materials",
+                "quote": "demo-reagent on_hand=5.0 need=1.0 status=on_hand lead=None"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "点名材料的库存覆盖方案用量。",
+            "status": "pass"
+          },
+          {
+            "category": "time_cost",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].steps",
+                "quote": "occupied_hours = 1.0 = 1.0"
+              }
+            ],
+            "hard": false,
+            "numbers": {
+              "occupied_hours": 1,
+              "occupied_hours_formula": "occupied_hours = 1.0 = 1.0",
+              "occupied_hours_terms": [
+                {
+                  "hours": 1,
+                  "step": "s1"
+                }
+              ],
+              "person_hours": null,
+              "wait_days": 1,
+              "wait_days_formula": "wait_days = max(1.0) = 1.0"
+            },
+            "statement": "工时只加了写明小时数的步骤。 occupied_hours = 1.0 = 1.0。 wait_days = max(1.0) = 1.0。",
+            "status": "pass"
+          },
+          {
+            "category": "parameter_range",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].parameters",
+                "quote": "temperature=50.0 range 20.0..80.0 via demo-oven"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "写出的参数值都落在已关联的量程内。",
+            "status": "pass"
+          },
+          {
+            "category": "risk_exception",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0].risks",
+                "quote": "{'trigger': '示意故障', 'mitigation': '停止'}"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "至少一条风险同时写了触发条件和处置。",
+            "status": "pass"
+          },
+          {
+            "category": "ethics_safety",
+            "evidence": [
+              {
+                "locator": "case.json:plans[0]",
+                "quote": "ethics keywords absent"
+              }
+            ],
+            "hard": false,
+            "numbers": {},
+            "statement": "方案原文没有人体、动物、危险试剂或个人数据的触发词。审批状态：not_required。",
+            "status": "not_indicated"
+          },
+          {
+            "category": "samples",
+            "evidence": [
+              {
+                "locator": "case.json:contracts.samples",
+                "quote": "n_available=4.0"
+              }
+            ],
+            "hard": false,
+            "numbers": {
+              "n_available": 4,
+              "n_required": 2
+            },
+            "statement": "可用样本 4.0 覆盖需求 2.0。",
+            "status": "pass"
+          }
+        ],
+        "plan_id": "demo",
+        "time": {
+          "occupied_hours": 1,
+          "occupied_hours_formula": "occupied_hours = 1.0 = 1.0",
+          "occupied_hours_terms": [
+            {
+              "hours": 1,
+              "step": "s1"
+            }
+          ],
+          "person_hours": null,
+          "wait_days": 1,
+          "wait_days_formula": "wait_days = max(1.0) = 1.0"
+        },
+        "uncertainties": [],
+        "verdict": "feasible",
+        "version": null
+      }
+    ]
+  },
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "experiment_plan": {
+    "chosen_plan_id": "demo",
+    "conditions_before_execution": [],
+    "controls": [
+      {
+        "blocks": "试剂本底",
+        "name": "blank"
+      }
+    ],
+    "hypothesis": "示意：产率随温度升高，仅用于演示接口。",
+    "note": "字段均来自被点名的方案版本；没有写的步骤不会在这里补上。",
+    "parameters": [
+      {
+        "name": "temperature",
+        "unit": "C",
+        "value": 50
+      }
+    ],
+    "readout": null,
+    "resources": [
+      "demo-oven"
+    ],
+    "reviewed_plan_id": "demo",
+    "steps": [
+      {
+        "hours": 1,
+        "id": "s1"
+      }
+    ],
+    "time": {
+      "occupied_hours": 1,
+      "occupied_hours_formula": "occupied_hours = 1.0 = 1.0",
+      "occupied_hours_terms": [
+        {
+          "hours": 1,
+          "step": "s1"
+        }
+      ],
+      "person_hours": null,
+      "wait_days": 1,
+      "wait_days_formula": "wait_days = max(1.0) = 1.0"
+    },
+    "variables": [
+      {
+        "name": "temperature",
+        "unit": "C"
+      }
+    ],
+    "verdict": "feasible"
+  },
+  "mode": "feasibility",
+  "output_contract_echo": null,
+  "runtime_seconds": 0.006448,
+  "sources": [
+    {
+      "bytes": 1463,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "332e70847697386fc2fd54b0d9f8ae062dc991e5266182c9ec526a25a50d5267",
+      "truncated": false
+    },
+    {
+      "bytes": 70,
+      "error": null,
+      "path": "task.md",
+      "reader": "text",
+      "sha256": "436d8656daae89f27a31ca18864bf0a069f02a6714859963cf4f3a73ee6811ef",
+      "truncated": false
+    }
+  ],
+  "status": "success",
+  "summary": "共审查 1 个方案版本。demo = feasible可以开工的版本是 demo。",
+  "uncertainties": []
+}
