@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "按原文数字和否定词核对主张。",
+      "evidence": "claims=1",
+      "id": "c-fact"
+    }
+  ]
+}

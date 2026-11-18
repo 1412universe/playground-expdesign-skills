@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "图形只编码已读到的数值。",
+      "evidence": "x",
+      "id": "c-viz"
+    }
+  ]
+}

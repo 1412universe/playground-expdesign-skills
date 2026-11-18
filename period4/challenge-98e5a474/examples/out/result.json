@@ -1,0 +1,80 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只画给定实体和两端都在列表里的关系。",
+      "evidence": "nodes=2 edges=1",
+      "id": "c-svg"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 2,
+      "name": "nodes_match_input",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "A",
+      "why": "sample"
+    },
+    {
+      "item": "B",
+      "why": "detector"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "draft",
+  "output_contract_echo": null,
+  "primary": {
+    "edges": [
+      {
+        "label": "signal",
+        "source": "A",
+        "target": "B"
+      }
+    ],
+    "figure": "schematic.svg",
+    "nodes": [
+      {
+        "id": "A",
+        "label": "sample"
+      },
+      {
+        "id": "B",
+        "label": "detector"
+      }
+    ]
+  },
+  "profile": "schematic",
+  "runtime_seconds": 0.006472,
+  "sources": [
+    {
+      "bytes": 281,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "879d12ecc49b827890588e569ca1999d27a08772ecc2aae38be296d449d1a47a",
+      "truncated": false
+    },
+    {
+      "locator": "entities",
+      "quote": "sample"
+    },
+    {
+      "locator": "entities",
+      "quote": "detector"
+    }
+  ],
+  "status": "success",
+  "summary": "示意图包含 2 个给定实体和 1 条两端都存在的关系。",
+  "uncertainties": [
+    {
+      "detail": "没有加入实体列表以外的对象。",
+      "id": "u-draw",
+      "scope": true,
+      "topic": "schematic"
+    }
+  ]
+}

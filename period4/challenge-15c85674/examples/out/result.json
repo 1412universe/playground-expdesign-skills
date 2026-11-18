@@ -1,0 +1,58 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只摘录原文，重叠不足的问题留空。",
+      "evidence": "quoted=1",
+      "id": "c-qa"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 1,
+      "name": "questions_answered_or_refused",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "q1",
+      "why": "答案是原文摘录，重叠词 2 个。"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "text",
+  "output_contract_echo": null,
+  "primary": {
+    "answers": [
+      {
+        "answer": "The anneal time was 30 minutes.",
+        "locator": "case.paragraphs[0]",
+        "question": "What anneal time was reported?",
+        "question_id": "q1",
+        "status": "quoted",
+        "why": "答案是原文摘录，重叠词 2 个。"
+      }
+    ],
+    "materials": []
+  },
+  "profile": "qa",
+  "runtime_seconds": 0.006142,
+  "sources": [
+    {
+      "bytes": 251,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "4ee9765a79ec87695647045b3761c6520eb9af4298a882e91101b3e54825d94b",
+      "truncated": false
+    },
+    {
+      "locator": "case.paragraphs[0]",
+      "quote": "The anneal time was 30 minutes."
+    }
+  ],
+  "status": "success",
+  "summary": "回答 1 个问题，其中 1 个有原文摘录，其余标为证据不足。",
+  "uncertainties": []
+}

@@ -1,0 +1,98 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只对已提供记录打分、按标识符去重，并保留未命中的记录编号。",
+      "evidence": "records=1 hits=1 duplicates=0",
+      "id": "c-rank"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 1,
+      "name": "records_read",
+      "ok": true
+    },
+    {
+      "detail": 1,
+      "name": "no_fabricated_identifier",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "w",
+      "why": "按已提供的语言视图匹配，缺失正文保持为空。"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "corpus",
+  "output_contract_echo": null,
+  "primary": {
+    "duplicate_ids": [],
+    "omission_ids": [],
+    "profile": "crosslang",
+    "query": "oxide",
+    "query_terms": [
+      "oxide"
+    ],
+    "results": [
+      {
+        "decision": "include",
+        "doi": null,
+        "id": "w",
+        "invented": false,
+        "language": null,
+        "locator": "documents[0]",
+        "matched_terms": [
+          "oxide"
+        ],
+        "score": 3,
+        "source": null,
+        "text_excerpt": "",
+        "title": "Oxide",
+        "views": [
+          {
+            "language": "en",
+            "role": "abstract",
+            "text": "oxide abstract"
+          },
+          {
+            "language": "pt",
+            "role": "body",
+            "text": null
+          }
+        ],
+        "why": "按已提供的语言视图匹配，缺失正文保持为空。",
+        "year": null
+      }
+    ],
+    "uncovered_terms": []
+  },
+  "profile": "crosslang",
+  "runtime_seconds": 0.007209,
+  "sources": [
+    {
+      "bytes": 382,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "37eedb929c2146e6f11e5523e32954b373d2a6ebb3c5d6470c7ec83487a25bdd",
+      "truncated": false
+    },
+    {
+      "locator": "documents[0]",
+      "quote": "Oxide"
+    }
+  ],
+  "status": "success",
+  "summary": "跨语言视图：读到 1 条记录，保留 1 条，合并重复 0 条，未命中 0 条。没有访问实时数据库。",
+  "uncertainties": [
+    {
+      "detail": "一种语言视图里的句子不会被写进缺失的另一种语言正文。",
+      "id": "u-scope-0",
+      "scope": true,
+      "topic": "scope"
+    }
+  ]
+}

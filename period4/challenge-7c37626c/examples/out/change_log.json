@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "没有公式源就不推导。",
+      "evidence": "xml=0",
+      "id": "c-math"
+    }
+  ]
+}

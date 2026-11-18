@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "只并列条件相同的指标。",
+      "evidence": "comparable=1",
+      "id": "c-cmp"
+    }
+  ]
+}

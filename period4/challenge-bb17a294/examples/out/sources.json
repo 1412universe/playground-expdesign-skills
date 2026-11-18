@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "bytes": 136,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "cf5cbf59fbcfe9a5b28de2e5c2efc17e2130ec6241ca8c2933783bf968f8029d",
+      "truncated": false
+    },
+    {
+      "locator": "sources[0]",
+      "quote": "The gap is 1.2 eV."
+    }
+  ]
+}

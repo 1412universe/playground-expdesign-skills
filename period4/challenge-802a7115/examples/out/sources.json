@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "bytes": 382,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "37eedb929c2146e6f11e5523e32954b373d2a6ebb3c5d6470c7ec83487a25bdd",
+      "truncated": false
+    },
+    {
+      "locator": "documents[0]",
+      "quote": "Oxide"
+    }
+  ]
+}

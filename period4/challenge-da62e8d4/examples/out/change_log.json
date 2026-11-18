@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "不在缺少原始列时复算。",
+      "evidence": "steps=1",
+      "id": "c-repro"
+    }
+  ]
+}

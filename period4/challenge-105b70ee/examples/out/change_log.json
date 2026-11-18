@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "字段值必须能在原文邻近位置读到。",
+      "evidence": "missing=",
+      "id": "c-ex"
+    }
+  ]
+}

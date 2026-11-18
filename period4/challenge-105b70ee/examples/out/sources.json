@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "bytes": 128,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "eeeeb9c2f748f1b4f3f82b0ff11b075105ace83b2d07a791d4d3b0e588d25306",
+      "truncated": false
+    },
+    {
+      "locator": "case.paragraphs[0]",
+      "quote": "gap is 1.2"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "操作序列写进 operations.py，并与结果同时留下。",
+      "evidence": "steps=1",
+      "id": "c-code"
+    }
+  ]
+}

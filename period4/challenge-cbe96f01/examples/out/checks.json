@@ -1,0 +1,9 @@
+{
+  "checks": [
+    {
+      "detail": 1,
+      "name": "no_planted_defect",
+      "ok": true
+    }
+  ]
+}

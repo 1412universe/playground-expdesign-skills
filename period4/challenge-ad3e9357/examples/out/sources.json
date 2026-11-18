@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "bytes": 170,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "65b22e9310313f26934d368b214f9af69414d09cfa3717d6b80fd1e1f0782cdc",
+      "truncated": false
+    },
+    {
+      "locator": "patents[0]",
+      "quote": "Film"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "bytes": 51,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "9e74c880ea0c33dd6db75faabc1e887b37eb5255a49f207d90437eb2f3abd3c2",
+      "truncated": false
+    },
+    {
+      "bytes": 8,
+      "error": null,
+      "path": "data.csv",
+      "reader": "csv",
+      "sha256": "4bf0e63035dd1fafdbe5915d64110833dacd4754cfbb5e70330440fd3bb5f53b",
+      "truncated": false
+    },
+    {
+      "locator": "data.csv",
+      "quote": "n=3"
+    }
+  ]
+}

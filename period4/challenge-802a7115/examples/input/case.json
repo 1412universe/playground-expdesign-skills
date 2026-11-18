@@ -1,0 +1,23 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "query": "oxide",
+  "documents": [
+    {
+      "id": "w",
+      "title": "Oxide",
+      "views": [
+        {
+          "language": "en",
+          "text": "oxide abstract",
+          "role": "abstract"
+        },
+        {
+          "language": "pt",
+          "text": null,
+          "role": "body"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "steps": [
+    "Anneal the film."
+  ],
+  "metrics": [
+    {
+      "name": "gap",
+      "value": 1.2
+    }
+  ]
+}

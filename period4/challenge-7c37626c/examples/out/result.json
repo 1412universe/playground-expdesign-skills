@@ -1,0 +1,47 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "没有公式源就不推导。",
+      "evidence": "xml=0",
+      "id": "c-math"
+    }
+  ],
+  "checks": [
+    {
+      "detail": "derivation=null",
+      "name": "no_invented_derivation",
+      "ok": true
+    }
+  ],
+  "confirmations": [],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "text",
+  "output_contract_echo": null,
+  "primary": {
+    "derivation": null,
+    "formulas": []
+  },
+  "profile": "formula",
+  "runtime_seconds": 0.006291,
+  "sources": [
+    {
+      "bytes": 51,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "9e74c880ea0c33dd6db75faabc1e887b37eb5255a49f207d90437eb2f3abd3c2",
+      "truncated": false
+    }
+  ],
+  "status": "partial",
+  "summary": "没有公式源。缺公式的案例保持部分完成，不反推、不把未知填 0。",
+  "uncertainties": [
+    {
+      "detail": "材料没有公式节点或可复算数据。",
+      "id": "u-math",
+      "scope": false,
+      "topic": "formula"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只计算样本量、均值、样本标准差、中位数和极值。",
+      "evidence": "data.csv",
+      "id": "c-stats"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 1,
+      "name": "p_value_null",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "x",
+      "why": "n=3 mean=2"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "table",
+  "output_contract_echo": null,
+  "primary": {
+    "columns": {
+      "x": {
+        "max": 3,
+        "mean": 2,
+        "median": 2,
+        "min": 1,
+        "n": 3,
+        "p_value": null,
+        "stdev_sample": 1
+      }
+    },
+    "source": "data.csv",
+    "test": null
+  },
+  "profile": "stats",
+  "runtime_seconds": 0.006806,
+  "sources": [
+    {
+      "bytes": 51,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "9e74c880ea0c33dd6db75faabc1e887b37eb5255a49f207d90437eb2f3abd3c2",
+      "truncated": false
+    },
+    {
+      "bytes": 8,
+      "error": null,
+      "path": "data.csv",
+      "reader": "csv",
+      "sha256": "4bf0e63035dd1fafdbe5915d64110833dacd4754cfbb5e70330440fd3bb5f53b",
+      "truncated": false
+    },
+    {
+      "locator": "data.csv",
+      "quote": "n=3"
+    }
+  ],
+  "status": "success",
+  "summary": "描述 1 个数值列。没有做假设检验，p 值保持为空。",
+  "uncertainties": [
+    {
+      "detail": "材料没有指定检验方法，不报告 p 值。",
+      "id": "u-test",
+      "scope": true,
+      "topic": "stats"
+    }
+  ]
+}

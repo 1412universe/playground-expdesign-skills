@@ -1,0 +1,9 @@
+{
+  "checks": [
+    {
+      "detail": 0,
+      "name": "missing_is_not_zero",
+      "ok": true
+    }
+  ]
+}

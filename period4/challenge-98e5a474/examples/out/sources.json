@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "bytes": 281,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "879d12ecc49b827890588e569ca1999d27a08772ecc2aae38be296d449d1a47a",
+      "truncated": false
+    },
+    {
+      "locator": "entities",
+      "quote": "sample"
+    },
+    {
+      "locator": "entities",
+      "quote": "detector"
+    }
+  ]
+}

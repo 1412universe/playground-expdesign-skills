@@ -1,0 +1,9 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "images": [
+    {
+      "id": "fig-no-pixels"
+    }
+  ]
+}

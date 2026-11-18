@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "没有表，不产生分析结果。",
+      "evidence": "failed",
+      "id": "c-stop"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "entities": [
+    {
+      "id": "A",
+      "label": "sample"
+    },
+    {
+      "id": "B",
+      "label": "detector"
+    }
+  ],
+  "relations": [
+    {
+      "source": "A",
+      "target": "B",
+      "label": "signal"
+    }
+  ]
+}

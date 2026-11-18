@@ -1,0 +1,22 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "documents": [
+    {
+      "id": "a",
+      "condition": "dye A",
+      "unit": "mM",
+      "measures": {
+        "concentration": 1
+      }
+    },
+    {
+      "id": "b",
+      "condition": "dye A",
+      "unit": "mM",
+      "measures": {
+        "concentration": 2
+      }
+    }
+  ]
+}

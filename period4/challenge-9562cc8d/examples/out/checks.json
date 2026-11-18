@@ -1,0 +1,9 @@
+{
+  "checks": [
+    {
+      "detail": "examples/out/chart.svg",
+      "name": "svg_written",
+      "ok": true
+    }
+  ]
+}

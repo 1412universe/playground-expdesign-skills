@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "只画给定实体和两端都在列表里的关系。",
+      "evidence": "nodes=2 edges=1",
+      "id": "c-svg"
+    }
+  ]
+}

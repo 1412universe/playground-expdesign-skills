@@ -1,0 +1,16 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What anneal time was reported?"
+    }
+  ],
+  "paragraphs": [
+    {
+      "id": "p1",
+      "text": "The anneal time was 30 minutes."
+    }
+  ]
+}

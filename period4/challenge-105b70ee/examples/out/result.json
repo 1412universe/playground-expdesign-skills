@@ -1,0 +1,56 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "字段值必须能在原文邻近位置读到。",
+      "evidence": "missing=",
+      "id": "c-ex"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 0,
+      "name": "missing_is_not_zero",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "gap",
+      "why": "extracted"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "text",
+  "output_contract_echo": null,
+  "primary": {
+    "fields": [
+      {
+        "field": "gap",
+        "locator": "case.paragraphs[0]",
+        "quote": "gap is 1.2",
+        "status": "extracted",
+        "value": 1.2
+      }
+    ]
+  },
+  "profile": "extract",
+  "runtime_seconds": 0.006579,
+  "sources": [
+    {
+      "bytes": 128,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "eeeeb9c2f748f1b4f3f82b0ff11b075105ace83b2d07a791d4d3b0e588d25306",
+      "truncated": false
+    },
+    {
+      "locator": "case.paragraphs[0]",
+      "quote": "gap is 1.2"
+    }
+  ],
+  "status": "success",
+  "summary": "提取 1 个字段，其中 0 个原文没有报告，保持为空而不是 0。",
+  "uncertainties": []
+}

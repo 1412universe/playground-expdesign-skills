@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "只对已提供记录打分、按标识符去重，并保留未命中的记录编号。",
+      "evidence": "records=2 hits=1 duplicates=0",
+      "id": "c-rank"
+    }
+  ]
+}

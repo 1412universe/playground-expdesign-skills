@@ -1,0 +1,60 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "正文只保留能指回原文的句子。",
+      "evidence": "kept=0 dropped=1",
+      "id": "c-draft"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 0,
+      "name": "every_sentence_has_source",
+      "ok": true
+    }
+  ],
+  "confirmations": [],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "draft",
+  "output_contract_echo": null,
+  "primary": {
+    "draft": "draft.md",
+    "dropped": [
+      "没有审稿意见，不写回复。"
+    ],
+    "genre": "response",
+    "sections": [
+      "审稿意见",
+      "能回应的证据",
+      "不能回应的意见"
+    ],
+    "sentences": []
+  },
+  "profile": "response",
+  "runtime_seconds": 0.006363,
+  "sources": [
+    {
+      "bytes": 145,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "a2151bf9de3723760c6baafbc20a56402c71fd0f088af6ccbb6b208faa8450ed",
+      "truncated": false
+    },
+    {
+      "locator": "sources[0]",
+      "quote": "The measured gap is 1.2 eV."
+    }
+  ],
+  "status": "partial",
+  "summary": "写成 0 句带出处的文字，丢弃 1 句没有出处或数字对不上的内容。",
+  "uncertainties": [
+    {
+      "detail": "没有审稿意见，不写回复。",
+      "id": "u-drop-0",
+      "scope": false,
+      "topic": "draft"
+    }
+  ]
+}

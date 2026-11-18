@@ -1,0 +1,75 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "图形只编码已读到的数值。",
+      "evidence": "x",
+      "id": "c-viz"
+    }
+  ],
+  "checks": [
+    {
+      "detail": "examples/out/chart.svg",
+      "name": "svg_written",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "x",
+      "why": "柱高按该列最大值归一，数字标在柱上。"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "table",
+  "output_contract_echo": null,
+  "primary": {
+    "chart": "chart.svg",
+    "column": "x",
+    "note": "柱高按该列最大值归一，数字标在柱上。",
+    "source": "data.csv",
+    "summary": {
+      "max": 3,
+      "mean": 2,
+      "median": 2,
+      "min": 1,
+      "n": 3,
+      "p_value": null,
+      "stdev_sample": 1
+    }
+  },
+  "profile": "viz",
+  "runtime_seconds": 0.0065,
+  "sources": [
+    {
+      "bytes": 51,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "9e74c880ea0c33dd6db75faabc1e887b37eb5255a49f207d90437eb2f3abd3c2",
+      "truncated": false
+    },
+    {
+      "bytes": 8,
+      "error": null,
+      "path": "data.csv",
+      "reader": "csv",
+      "sha256": "4bf0e63035dd1fafdbe5915d64110833dacd4754cfbb5e70330440fd3bb5f53b",
+      "truncated": false
+    },
+    {
+      "locator": "data.csv",
+      "quote": "x n=3"
+    }
+  ],
+  "status": "success",
+  "summary": "用列 x 的 3 个非缺失值画了可编辑 SVG，没有把图当成新的统计结论。",
+  "uncertainties": [
+    {
+      "detail": "柱高按该列最大值归一，数字标在柱上。",
+      "id": "u-viz",
+      "scope": true,
+      "topic": "viz"
+    }
+  ]
+}

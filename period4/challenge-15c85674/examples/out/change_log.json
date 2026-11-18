@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "只摘录原文，重叠不足的问题留空。",
+      "evidence": "quoted=1",
+      "id": "c-qa"
+    }
+  ]
+}

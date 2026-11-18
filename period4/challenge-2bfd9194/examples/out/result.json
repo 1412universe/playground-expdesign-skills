@@ -1,0 +1,90 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只对已提供记录打分、按标识符去重，并保留未命中的记录编号。",
+      "evidence": "records=2 hits=1 duplicates=0",
+      "id": "c-rank"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 2,
+      "name": "records_read",
+      "ok": true
+    },
+    {
+      "detail": 1,
+      "name": "no_fabricated_identifier",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "a",
+      "why": "查询词命中：oxide, film。"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "corpus",
+  "output_contract_echo": null,
+  "primary": {
+    "duplicate_ids": [],
+    "omission_ids": [
+      "b"
+    ],
+    "profile": "index",
+    "query": "oxide film",
+    "query_terms": [
+      "oxide",
+      "film"
+    ],
+    "results": [
+      {
+        "decision": "include",
+        "doi": "10.9/a",
+        "id": "a",
+        "invented": false,
+        "language": null,
+        "locator": "documents[0]",
+        "matched_terms": [
+          "oxide",
+          "film"
+        ],
+        "score": 6,
+        "source": null,
+        "text_excerpt": "anneal",
+        "title": "Oxide film stability",
+        "why": "查询词命中：oxide, film。",
+        "year": 2020
+      }
+    ],
+    "uncovered_terms": []
+  },
+  "profile": "index",
+  "runtime_seconds": 0.007471,
+  "sources": [
+    {
+      "bytes": 347,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "aa2d50cfdc00ac82cad5ad6985f6483f7111337522072efa3d1b0b026d2d86c5",
+      "truncated": false
+    },
+    {
+      "locator": "documents[0]",
+      "quote": "Oxide film stability"
+    }
+  ],
+  "status": "success",
+  "summary": "资料索引：读到 2 条记录，保留 1 条，合并重复 0 条，未命中 1 条。没有访问实时数据库。",
+  "uncertainties": [
+    {
+      "detail": "纳排和问答只覆盖这次给出的记录，不声称系统检索已经穷尽。",
+      "id": "u-scope-0",
+      "scope": true,
+      "topic": "scope"
+    }
+  ]
+}

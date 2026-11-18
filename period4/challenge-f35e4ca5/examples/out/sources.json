@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "bytes": 110,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "b59e246283c30d6b22cf553da00f3f8ea30980816feb1be72161f610e83fe265",
+      "truncated": false
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "只计算样本量、均值、样本标准差、中位数和极值。",
+      "evidence": "data.csv",
+      "id": "c-stats"
+    }
+  ]
+}

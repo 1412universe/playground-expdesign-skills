@@ -1,0 +1,9 @@
+{
+  "checks": [
+    {
+      "detail": 0,
+      "name": "every_sentence_has_source",
+      "ok": true
+    }
+  ]
+}

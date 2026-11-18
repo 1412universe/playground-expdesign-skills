@@ -1,0 +1,49 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只转写表内数字。",
+      "evidence": "rows=0 gaps=1",
+      "id": "c-fig"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 1,
+      "name": "no_invented_pixels",
+      "ok": true
+    }
+  ],
+  "confirmations": [],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "text",
+  "output_contract_echo": null,
+  "primary": {
+    "figure_gaps": [
+      "图 fig-no-pixels 没有给像素、数据点或表，不构造读数。"
+    ],
+    "table_values": []
+  },
+  "profile": "figure",
+  "runtime_seconds": 0.005746,
+  "sources": [
+    {
+      "bytes": 110,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "b59e246283c30d6b22cf553da00f3f8ea30980816feb1be72161f610e83fe265",
+      "truncated": false
+    }
+  ],
+  "status": "partial",
+  "summary": "从已给的表读出 0 行数值；1 张没有像素的图只记缺口。",
+  "uncertainties": [
+    {
+      "detail": "图 fig-no-pixels 没有给像素、数据点或表，不构造读数。",
+      "id": "u-fig-0",
+      "scope": false,
+      "topic": "figure"
+    }
+  ]
+}

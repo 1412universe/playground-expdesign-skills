@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "bytes": 338,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "007a1b16096294adc5eec286316d3d33f56a657b90d554f2b730b96c321dfb1f",
+      "truncated": false
+    },
+    {
+      "locator": "documents[0]",
+      "quote": "a"
+    },
+    {
+      "locator": "documents[1]",
+      "quote": "b"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "bytes": 251,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "4ee9765a79ec87695647045b3761c6520eb9af4298a882e91101b3e54825d94b",
+      "truncated": false
+    },
+    {
+      "locator": "case.paragraphs[0]",
+      "quote": "The anneal time was 30 minutes."
+    }
+  ]
+}

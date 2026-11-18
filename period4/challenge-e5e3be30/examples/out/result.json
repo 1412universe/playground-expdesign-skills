@@ -1,0 +1,65 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "按原文数字和否定词核对主张。",
+      "evidence": "claims=1",
+      "id": "c-fact"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 1,
+      "name": "claims_labelled",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "c1",
+      "why": "supported"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "text",
+  "output_contract_echo": null,
+  "primary": {
+    "claims": [
+      {
+        "claim": "gap is 1.2",
+        "claim_id": "c1",
+        "locators": [
+          "case.paragraphs[0]"
+        ],
+        "verdict": "supported",
+        "why": "否定词和数字都要在同一处原文里对上；对不上就是证据不足，不是实验已经否定。"
+      }
+    ]
+  },
+  "profile": "fact",
+  "runtime_seconds": 0.006907,
+  "sources": [
+    {
+      "bytes": 135,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "b7b878b42eb1e79b359b741e59a6264665bdf5c9cb32a587189084db67fb75d0",
+      "truncated": false
+    },
+    {
+      "locator": "case.paragraphs[0]",
+      "quote": ""
+    }
+  ],
+  "status": "success",
+  "summary": "核对 1 条主张。冲突只在两处原文不一致时成立。",
+  "uncertainties": [
+    {
+      "detail": "没有把证据不足写成实验否定。",
+      "id": "u-fact",
+      "scope": true,
+      "topic": "fact"
+    }
+  ]
+}

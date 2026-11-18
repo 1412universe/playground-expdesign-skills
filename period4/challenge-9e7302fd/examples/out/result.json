@@ -1,0 +1,61 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只记录原文里看得到的审查面。",
+      "evidence": "facets=1",
+      "id": "c-audit"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 1,
+      "name": "no_planted_defect",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "统计",
+      "why": "not_observed"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "text",
+  "output_contract_echo": null,
+  "primary": {
+    "findings": [
+      {
+        "facet": "统计",
+        "locators": [],
+        "quote": null,
+        "severity": "none",
+        "status": "not_observed",
+        "verdict": null,
+        "why": "正文没有出现这一审查面的表述。这不是缺陷结论。"
+      }
+    ]
+  },
+  "profile": "audit",
+  "runtime_seconds": 0.005601,
+  "sources": [
+    {
+      "bytes": 135,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "fba754b14c895a64fe615604e06c06f685cf774acf67022926f301dd83861500",
+      "truncated": false
+    }
+  ],
+  "status": "success",
+  "summary": "按 1 个审查面记录原文有没有写到，没有强行给出缺陷裁决。",
+  "uncertainties": [
+    {
+      "detail": "未观察到不等于违规或方法错误。",
+      "id": "u-audit",
+      "scope": true,
+      "topic": "review"
+    }
+  ]
+}

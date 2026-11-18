@@ -1,0 +1,9 @@
+{
+  "checks": [
+    {
+      "detail": "derivation=null",
+      "name": "no_invented_derivation",
+      "ok": true
+    }
+  ]
+}

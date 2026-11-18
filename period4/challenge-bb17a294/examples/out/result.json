@@ -1,0 +1,59 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "正文只保留能指回原文的句子。",
+      "evidence": "kept=0 dropped=1",
+      "id": "c-draft"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 0,
+      "name": "every_sentence_has_source",
+      "ok": true
+    }
+  ],
+  "confirmations": [],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "draft",
+  "output_contract_echo": null,
+  "primary": {
+    "draft": "draft.md",
+    "dropped": [
+      "没有给出译文。原文句子已列出，但不生成翻译。"
+    ],
+    "genre": "translate",
+    "sections": [
+      "原文",
+      "已核对的译文"
+    ],
+    "sentences": []
+  },
+  "profile": "translate",
+  "runtime_seconds": 0.006485,
+  "sources": [
+    {
+      "bytes": 136,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "cf5cbf59fbcfe9a5b28de2e5c2efc17e2130ec6241ca8c2933783bf968f8029d",
+      "truncated": false
+    },
+    {
+      "locator": "sources[0]",
+      "quote": "The gap is 1.2 eV."
+    }
+  ],
+  "status": "partial",
+  "summary": "写成 0 句带出处的文字，丢弃 1 句没有出处或数字对不上的内容。",
+  "uncertainties": [
+    {
+      "detail": "没有给出译文。原文句子已列出，但不生成翻译。",
+      "id": "u-drop-0",
+      "scope": false,
+      "topic": "draft"
+    }
+  ]
+}

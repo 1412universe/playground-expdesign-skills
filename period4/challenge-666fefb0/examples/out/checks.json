@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "detail": 2,
+      "name": "records_read",
+      "ok": true
+    },
+    {
+      "detail": 1,
+      "name": "no_fabricated_identifier",
+      "ok": true
+    }
+  ]
+}

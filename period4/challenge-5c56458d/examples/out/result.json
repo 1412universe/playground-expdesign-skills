@@ -1,0 +1,44 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "没有表，不产生分析结果。",
+      "evidence": "failed",
+      "id": "c-stop"
+    }
+  ],
+  "checks": [
+    {
+      "detail": "没有 SQLite 数据库，不编造查询结果。",
+      "name": "input_shape",
+      "ok": false
+    }
+  ],
+  "confirmations": [],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "table",
+  "output_contract_echo": null,
+  "primary": {},
+  "profile": "sql",
+  "runtime_seconds": 0.00588,
+  "sources": [
+    {
+      "bytes": 51,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "9e74c880ea0c33dd6db75faabc1e887b37eb5255a49f207d90437eb2f3abd3c2",
+      "truncated": false
+    }
+  ],
+  "status": "failed",
+  "summary": "没有 SQLite 数据库，不编造查询结果。",
+  "uncertainties": [
+    {
+      "detail": "没有 SQLite 数据库，不编造查询结果。",
+      "id": "u-shape",
+      "scope": false,
+      "topic": "input"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "checks": [
+    {
+      "detail": "没有 SQLite 数据库，不编造查询结果。",
+      "name": "input_shape",
+      "ok": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "detail": 0,
+      "name": "imputed_cells",
+      "ok": true
+    },
+    {
+      "detail": 3,
+      "name": "report_matches_rows",
+      "ok": true
+    }
+  ]
+}

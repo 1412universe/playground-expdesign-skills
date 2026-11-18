@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "bytes": 164,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "1c3beb3879772b1aa35cf9bdaa10fa232a9f8acea11e21386b54d75873f56ae8",
+      "truncated": false
+    },
+    {
+      "locator": "steps[0]",
+      "quote": "Anneal the film."
+    }
+  ]
+}

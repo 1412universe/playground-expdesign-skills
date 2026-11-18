@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "只记录原文里看得到的审查面。",
+      "evidence": "facets=1",
+      "id": "c-audit"
+    }
+  ]
+}

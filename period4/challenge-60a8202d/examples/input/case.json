@@ -1,0 +1,20 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "query": "oxide film",
+  "documents": [
+    {
+      "id": "a",
+      "title": "Oxide film stability",
+      "abstract": "anneal",
+      "doi": "10.9/a",
+      "year": 2020
+    },
+    {
+      "id": "b",
+      "title": "Other topic",
+      "abstract": "zeolite",
+      "doi": "10.9/b"
+    }
+  ]
+}

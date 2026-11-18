@@ -1,0 +1,61 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "正文只保留能指回原文的句子。",
+      "evidence": "kept=1 dropped=0",
+      "id": "c-draft"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 1,
+      "name": "every_sentence_has_source",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "s1",
+      "why": "引用该句。"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "draft",
+  "output_contract_echo": null,
+  "primary": {
+    "draft": "draft.md",
+    "dropped": [],
+    "genre": "grant",
+    "sections": [
+      "研究问题",
+      "已有依据",
+      "未提供的计划项"
+    ],
+    "sentences": [
+      {
+        "source_id": "s1",
+        "text": "The measured gap is 1.2 eV."
+      }
+    ]
+  },
+  "profile": "grant",
+  "runtime_seconds": 0.006597,
+  "sources": [
+    {
+      "bytes": 145,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "a2151bf9de3723760c6baafbc20a56402c71fd0f088af6ccbb6b208faa8450ed",
+      "truncated": false
+    },
+    {
+      "locator": "sources[0]",
+      "quote": "The measured gap is 1.2 eV."
+    }
+  ],
+  "status": "success",
+  "summary": "写成 1 句带出处的文字，丢弃 0 句没有出处或数字对不上的内容。",
+  "uncertainties": []
+}

@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "只标记缺失、去掉完全重复的行，并按字典中的换算系数转换。",
+      "evidence": "{'rows_in': 3, 'rows_out': 3, 'missing_cells': 0, 'duplicate_groups': 0, 'conversions': 0, 'imputed_cells': 0}",
+      "id": "c-clean"
+    }
+  ]
+}

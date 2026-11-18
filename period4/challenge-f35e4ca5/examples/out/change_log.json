@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "只转写表内数字。",
+      "evidence": "rows=0 gaps=1",
+      "id": "c-fig"
+    }
+  ]
+}

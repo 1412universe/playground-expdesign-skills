@@ -1,0 +1,12 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "query": "US9",
+  "patents": [
+    {
+      "id": "p",
+      "title": "Film",
+      "patent_number": "US9"
+    }
+  ]
+}

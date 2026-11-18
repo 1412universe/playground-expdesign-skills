@@ -1,0 +1,77 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只并列条件相同的指标。",
+      "evidence": "comparable=1",
+      "id": "c-cmp"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 0,
+      "name": "no_pooled_unlike",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "concentration",
+      "why": "条件一致才并列。"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "text",
+  "output_contract_echo": null,
+  "primary": {
+    "comparable": [
+      {
+        "measure": "concentration",
+        "unit": "mM",
+        "values": [
+          {
+            "id": "a",
+            "locator": "documents[0]",
+            "value": 1
+          },
+          {
+            "id": "b",
+            "locator": "documents[1]",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "not_comparable": []
+  },
+  "profile": "compare",
+  "runtime_seconds": 0.005678,
+  "sources": [
+    {
+      "bytes": 338,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "007a1b16096294adc5eec286316d3d33f56a657b90d554f2b730b96c321dfb1f",
+      "truncated": false
+    },
+    {
+      "locator": "documents[0]",
+      "quote": "a"
+    },
+    {
+      "locator": "documents[1]",
+      "quote": "b"
+    }
+  ],
+  "status": "success",
+  "summary": "可并列的指标 1 个，因条件或单位不同而没有合并的 0 个。",
+  "uncertainties": [
+    {
+      "detail": "没有把不同染料、数据集或单位放进同一个汇总。",
+      "id": "u-pool",
+      "scope": true,
+      "topic": "compare"
+    }
+  ]
+}

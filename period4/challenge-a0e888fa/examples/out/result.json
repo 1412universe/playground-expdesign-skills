@@ -1,0 +1,89 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "只标记缺失、去掉完全重复的行，并按字典中的换算系数转换。",
+      "evidence": "{'rows_in': 3, 'rows_out': 3, 'missing_cells': 0, 'duplicate_groups': 0, 'conversions': 0, 'imputed_cells': 0}",
+      "id": "c-clean"
+    }
+  ],
+  "checks": [
+    {
+      "detail": 0,
+      "name": "imputed_cells",
+      "ok": true
+    },
+    {
+      "detail": 3,
+      "name": "report_matches_rows",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "quality",
+      "why": "报告数字等于结果表的行数和缺失计数。"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "table",
+  "output_contract_echo": null,
+  "primary": {
+    "conversions": [],
+    "duplicates": [],
+    "quality": {
+      "conversions": 0,
+      "duplicate_groups": 0,
+      "imputed_cells": 0,
+      "missing_cells": 0,
+      "rows_in": 3,
+      "rows_out": 3
+    },
+    "rows": [
+      {
+        "x": "1"
+      },
+      {
+        "x": "2"
+      },
+      {
+        "x": "3"
+      }
+    ],
+    "source": "data.csv"
+  },
+  "profile": "clean",
+  "runtime_seconds": 0.007022,
+  "sources": [
+    {
+      "bytes": 51,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "9e74c880ea0c33dd6db75faabc1e887b37eb5255a49f207d90437eb2f3abd3c2",
+      "truncated": false
+    },
+    {
+      "bytes": 8,
+      "error": null,
+      "path": "data.csv",
+      "reader": "csv",
+      "sha256": "4bf0e63035dd1fafdbe5915d64110833dacd4754cfbb5e70330440fd3bb5f53b",
+      "truncated": false
+    },
+    {
+      "locator": "data.csv",
+      "quote": "rows=3"
+    }
+  ],
+  "status": "success",
+  "summary": "清洗 3 行，保留 3 行，缺失单元格 0 个未填补，重复组 0 个。",
+  "uncertainties": [
+    {
+      "detail": "缺失和无效值保持为空，没有用均值或 0 填补。",
+      "id": "u-impute",
+      "scope": true,
+      "topic": "clean"
+    }
+  ]
+}

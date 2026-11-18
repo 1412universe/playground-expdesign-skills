@@ -1,0 +1,9 @@
+{
+  "change_log": [
+    {
+      "decision": "正文只保留能指回原文的句子。",
+      "evidence": "kept=0 dropped=1",
+      "id": "c-draft"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "example",
+  "example_only": true,
+  "sources": [
+    {
+      "id": "s1",
+      "text": "The measured gap is 1.2 eV."
+    }
+  ]
+}

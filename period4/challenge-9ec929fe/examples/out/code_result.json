@@ -1,0 +1,30 @@
+{
+  "rows_out": [
+    {
+      "x": "1"
+    },
+    {
+      "x": "2"
+    },
+    {
+      "x": "3"
+    }
+  ],
+  "steps": [
+    {
+      "columns": {
+        "x": {
+          "max": 3,
+          "mean": 2,
+          "median": 2,
+          "min": 1,
+          "n": 3,
+          "p_value": null,
+          "stdev_sample": 1
+        }
+      },
+      "op": "describe",
+      "step": 0
+    }
+  ]
+}

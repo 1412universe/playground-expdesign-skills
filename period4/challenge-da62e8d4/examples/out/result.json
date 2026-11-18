@@ -1,0 +1,71 @@
+{
+  "case_id": "example",
+  "change_log": [
+    {
+      "decision": "不在缺少原始列时复算。",
+      "evidence": "steps=1",
+      "id": "c-repro"
+    }
+  ],
+  "checks": [
+    {
+      "detail": "recomputed=null",
+      "name": "no_new_number",
+      "ok": true
+    }
+  ],
+  "confirmations": [
+    {
+      "item": "s1",
+      "why": "步骤来自输入。"
+    }
+  ],
+  "example_banner": "示意输出，不是平台正式案例，不能当作正式答案。",
+  "mode": "text",
+  "output_contract_echo": null,
+  "primary": {
+    "note": null,
+    "recomputed": null,
+    "reported": [
+      {
+        "locator": "metrics[0]",
+        "name": "gap",
+        "recomputed": null,
+        "value": 1.2
+      }
+    ],
+    "steps": [
+      {
+        "id": "s1",
+        "locator": "steps[0]",
+        "text": "Anneal the film."
+      }
+    ]
+  },
+  "profile": "repro",
+  "runtime_seconds": 0.006526,
+  "sources": [
+    {
+      "bytes": 164,
+      "error": null,
+      "path": "case.json",
+      "reader": "json",
+      "sha256": "1c3beb3879772b1aa35cf9bdaa10fa232a9f8acea11e21386b54d75873f56ae8",
+      "truncated": false
+    },
+    {
+      "locator": "steps[0]",
+      "quote": "Anneal the film."
+    }
+  ],
+  "status": "partial",
+  "summary": "转写步骤 1 条、已报告指标 1 条。没有原始可复算列时不新算数值。",
+  "uncertainties": [
+    {
+      "detail": "只核对材料里写明的步骤和指标。",
+      "id": "u-repro",
+      "scope": true,
+      "topic": "repro"
+    }
+  ]
+}
